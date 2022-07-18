@@ -1,6 +1,4 @@
-// The `movies` array from the file `src/data.js`.
-//console.log('movies: ', movies);
-const movies = require("./data");
+// const movies = require("./data");
 
 
 // Iteration 1: All directors? - Get the array of all directors.
@@ -11,17 +9,22 @@ const movies = require("./data");
 
 
 function getAllDirectors(movies) {
-  const aux = movies.map((films) =>{
-    return films.director
+  const aux = movies.map((film) =>{
+    return film.director
   })
   return aux
 }
-
+//const result = words.filter(word => word.length > 6);
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 function howManyMovies(eachMovies) {
-  let result = eachMovies.filter((eachMovies) => eachMovies.director === "Steven Spielberg") && (eachMovies)=> eachMovies.genre.includes("Drama"))
+  let result = eachMovies.filter((spielbergMovies) => spielbergMovies.director === "Steven Spielberg") && ((spielbergMovies) => spielbergMovies.genre.includes("Drama"));
+    
+    //((eachMovies) => eachMovies.director === "Steven Spielberg") && ((eachMovies)=> eachMovies.genre.includes("Drama")))
   return result.lenght()
+  
 }
+
+
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 function scoresAverage() {}
